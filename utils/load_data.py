@@ -1,10 +1,14 @@
-import numpy as np
-from utils.preprocessing import *
-from pickle import load, dump
-from keras.preprocessing.text import Tokenizer
-from keras.preprocessing.sequence import pad_sequences
-from keras.utils import to_categorical
 import random
+from pickle import dump, load
+
+import numpy as np
+from keras.preprocessing.sequence import pad_sequences
+from keras.preprocessing.text import Tokenizer
+from keras.utils import to_categorical
+
+from utils.preprocessing import *
+
+
 '''
 	*We have Flickr_8k.trainImages.txt and Flickr_8k.devImages.txt files which consist of unique identifiers(id) 
 		which can be used to filter the images and their descriptions
@@ -34,8 +38,8 @@ def load_set(filename):
 '''
 	*The model we'll develop will generate a caption for a given image and the caption will be generated one word at a time. 
 	*The sequence of previously generated words will be provided as input. Therefore, we will need a ‘first word’ to 
-		kick-off the generation process and a ‘last word‘ to signal the end of the caption.
-	*We'll use the strings ‘startseq‘ and ‘endseq‘ for this purpose. These tokens are added to the captions
+	   kick-off the generation process and a 'last word' to signal the end of the caption.
+	*We'll use the strings 'startseq' and 'endseq' for this purpose. These tokens are added to the captions
 		as they are loaded. 
 	*It is important to do this now before we encode the text so that the tokens are also encoded correctly.
 	*Load captions into memory
