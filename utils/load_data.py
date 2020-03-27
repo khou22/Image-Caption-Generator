@@ -37,7 +37,7 @@ def load_set(filename):
 
 '''
     *The model we'll develop will generate a caption for a given image and the caption will be generated one word at a time. 
-    *The sequence of previously generated words will be provided as input. Therefore, we will need a ‘first word’ to 
+    *The sequence of previously generated words will be provided as input. Therefore, we will need a 'first word' to 
        kick-off the generation process and a 'last word' to signal the end of the caption.
     *We'll use the strings 'startseq' and 'endseq' for this purpose. These tokens are added to the captions
        as they are loaded. 
@@ -110,7 +110,7 @@ def calc_max_length(captions):
     *Each caption will be split into words. The model will be provided one word & the image and it generates the next word. 
     *Then the first two words of the caption will be provided to the model as input with the image to generate the next word. 
     *This is how the model will be trained.
-    *For example, the input sequence “little girl running in field” would be 
+    *For example, the input sequence 'little girl running in field' would be 
         split into 6 input-output pairs to train the model:
 
         X1      X2(text sequence)                               y(word)
