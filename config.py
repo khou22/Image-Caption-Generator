@@ -6,13 +6,13 @@ config = {
 	'captions_path': 'train_val_data/Flickr8k.token.txt',
 	'tokenizer_path': 'model_data/tokenizer.pkl',
 	'model_data_path': 'model_data/', #Make sure you put that last slash(/)
-	'model_load_path': 'model_data/model_inceptionv3_epoch-20_train_loss-2.3803_val_loss-2.8221.hdf5',
+	'model_load_path': 'model_data/model_inceptionv3_epoch-19_train_loss-2.3802_val_loss-2.8636-beam5.hdf5',
 	'num_of_epochs': 20,
 	'max_length': 40, #This is set manually after training of model and required for test.py
 	'batch_size': 64,
-	'beam_search_k':5,
+	'beam_search_k':3,
 	'test_data_path': 'test_data/', #Make sure you put that last slash(/)
-	'model_type': 'inceptionv3', # inceptionv3 or vgg16
+	'model_type': 'vgg16', # inceptionv3 or vgg16
 	'random_seed': 1035
 }
 

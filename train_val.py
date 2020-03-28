@@ -1,9 +1,12 @@
-from pickle import load
-from utils.model import *
-from utils.load_data import loadTrainData, loadValData, data_generator
-from tensorflow.keras.callbacks import ModelCheckpoint
-from config import config, rnnConfig
 import random
+from pickle import load
+
+from tensorflow.keras.callbacks import ModelCheckpoint
+
+from config import config, rnnConfig
+from utils.load_data import data_generator, loadTrainData, loadValData
+from utils.model import *
+
 # Setting random seed for reproducibility of results
 random.seed(config['random_seed'])
 
@@ -39,8 +42,8 @@ vocab_size = len(tokenizer.word_index) + 1
 	*Now that we have the image features from CNN model, we need to feed them to a RNN Model.
 	*Define the RNN model
 """
-# model = RNNModel(vocab_size, max_length, rnnConfig, config['model_type'])
-model = AlternativeRNNModel(vocab_size, max_length, rnnConfig, config['model_type'])
+model = RNNModel(vocab_size, max_length, rnnConfig, config['model_type'])
+# model = AlternativeRNNModel(vocab_size, max_length, rnnConfig, config['model_type'])
 print('RNN Model (Decoder) Summary : ')
 print(model.summary())
 
