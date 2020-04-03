@@ -6,7 +6,7 @@ config = {
 	'captions_path': 'train_val_data/Flickr8k.token.txt',
 	'tokenizer_path': 'model_data/tokenizer.pkl',
 	'model_data_path': 'model_data/', #Make sure you put that last slash(/)
-	'model_load_path': 'model_data/model_inceptionv3_epoch-19_train_loss-2.3802_val_loss-2.8636-beam5.hdf5',
+	'model_load_path': 'model_data/model_vgg16_epoch-11_train_loss-2.2639_val_loss-3.1549.hdf5',
 	'num_of_epochs': 20,
 	'max_length': 40, #This is set manually after training of model and required for test.py
 	'batch_size': 64,
