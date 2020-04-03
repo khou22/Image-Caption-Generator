@@ -1,0 +1,1 @@
+[{"name": "VGG16", "load_path": "model_data/model_vgg16_epoch-11_train_loss-2.2639_val_loss-3.1549.hdf5", "model_type": "vgg16", "model": 
